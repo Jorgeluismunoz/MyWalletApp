@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8E8E8"
+    tools:context="com.example.projectoFinal.DetailsActivity">
+
+    <TextView
+        android:id="@+id/monthID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/yearID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#AAAAAA"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/monthID"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:onClick="onClickBack"
+        android:text="@string/buttonBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yearID" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTrans"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider2">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+android:visibility="gone"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/typeFieldID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone" />
+
+        <Spinner
+            android:id="@+id/descSpinnerID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/dateTransID"
+            android:layout_width="324dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="1"
+            android:hint="DATE"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/ETnumID"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/amount"
+            android:inputType="numberSigned"
+            android:textAlignment="textEnd"
+            android:textSize="10dp" />
+
+        <ImageView
+            android:id="@+id/addItemID"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="AddTransactionToList"
+            android:src="@drawable/ic_save"
+            android:text="@string/add_item"
+            android:textSize="14dp" />
+
+        <ImageView
+            android:id="@+id/cancelID"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="closeAddPanel"
+            android:src="@drawable/ic_cancel"
+            android:text="@string/add_item"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/expenseBtnID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:drawableEnd="@drawable/ic_baseline_remove_circle_outline_24"
+            android:onClick="ExpenseTrans"
+            android:text="@string/expense" />
+
+        <ImageView
+            android:id="@+id/addID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:gravity="fill_vertical"
+            android:src="@drawable/ic_add"
+
+            />
+
+        <Button
+            android:id="@+id/incomeBtnID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="10dp"
+            android:drawableEnd="@drawable/ic_add_circle"
+            android:onClick="IncomeTrans"
+            android:text="@string/income" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

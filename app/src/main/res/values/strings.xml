@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">WalletApp</string>
+    <string name="buttonBack">BACK</string>
+    <string name="add_item">Add</string>
+    <string name="amount">Amount</string>
+    <string name="description">Description</string>
+    <string name="transaction">Transaction</string>
+    <string name="income">Income</string>
+    <string name="expense">Expense</string>
+    <string name="charMonth">MONTH</string>
+    <string name="charYear">YEAR</string>
+    <string name="dateID">DATE</string>
+    <string name="typeID">Type</string>
+    <string name="dateSelectedID">Add new Month</string>
+    <string name="no_data_found">NO DATA FOUND</string>
+    <string name="titleID">Chart Data</string>
+    <string name="totalExpenseID">Total Expense</string>
+    <string name="totalIncomeD">Total Income</string>
+    <string name="Amount_E">0</string>
+    <string name="Amount_I">0</string>
+    <string name="TitleMain">WalletApp</string>
+    <string name="welcome">Welcome to</string>
+</resources>
